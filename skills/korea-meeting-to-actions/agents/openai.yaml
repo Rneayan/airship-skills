@@ -1,0 +1,4 @@
+interface:
+  display_name: "한국어 회의 실행 기록"
+  short_description: "회의 메모를 결정·실행·확인 항목으로 구조화"
+  default_prompt: "이 회의 메모를 결정과 실행 항목 중심으로 정리해줘."

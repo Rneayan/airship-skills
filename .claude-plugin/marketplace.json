@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Claude skills for solo creators — animation studio ops, Korean business communication, Obsidian journaling, and Todoist/Gmail/Calendar workflows.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "airship",
       "source": "./",
-      "description": "1인 크리에이터·스튜디오 운영용 스킬 모음: 한국어 비즈니스 메시지 교정, B2B 견적 분석, 메일 초안, 아침 브리핑, Todoist 정리, 옵시디언 일지·태스크 트리아지, AI 공모전 DB",
-      "version": "1.0.0",
+      "description": "1인 크리에이터·스튜디오 운영용 스킬 모음: 한국어 비즈니스, 현금흐름, 파트너십 아웃리치, 회의 실행 기록, Obsidian·Todoist 운영",
+      "version": "1.1.0",
       "author": {
         "name": "Airship Captain (비행선선장)",
         "url": "https://github.com/Rneayan"
@@ -27,7 +27,10 @@
         "todoist",
         "gmail",
         "briefing",
-        "quote"
+        "quote",
+        "cashflow",
+        "outreach",
+        "meeting"
       ]
     }
   ]

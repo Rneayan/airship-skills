@@ -1,0 +1,4 @@
+interface:
+  display_name: "한국형 파트너십 아웃리치"
+  short_description: "기관·브랜드·CPP 맞춤 제안과 후속 상태 관리"
+  default_prompt: "이 파트너에게 보낼 제안 초안과 후속 계획을 만들어줘."

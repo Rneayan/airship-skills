@@ -1,10 +1,10 @@
 {
   "name": "airship",
-  "description": "1인 크리에이터·스튜디오 운영용 Claude 스킬 모음 (Korean business messaging, B2B quoting, mail drafts, morning briefing, Todoist, Obsidian journal, AI contest DB)",
-  "version": "1.0.0",
+  "description": "1인 크리에이터·스튜디오 운영용 스킬 모음: 한국어 커뮤니케이션, 현금흐름, 파트너십, 회의 실행 기록, Obsidian·Todoist 워크플로",
+  "version": "1.1.0",
   "author": { "name": "Airship Captain (비행선선장)", "url": "https://github.com/Rneayan" },
   "homepage": "https://github.com/Rneayan/airship-skills",
   "repository": "https://github.com/Rneayan/airship-skills",
   "license": "MIT",
-  "keywords": ["korean", "creator", "animation-studio", "obsidian", "todoist", "gmail", "briefing"]
+  "keywords": ["korean", "creator", "animation-studio", "obsidian", "todoist", "gmail", "cashflow", "outreach", "meeting"]
 }

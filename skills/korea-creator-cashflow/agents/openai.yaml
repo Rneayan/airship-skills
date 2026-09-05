@@ -1,0 +1,4 @@
+interface:
+  display_name: "한국 1인 스튜디오 현금흐름"
+  short_description: "법인·개인 분리 13주 현금흐름과 Gate 0 점검"
+  default_prompt: "내 스튜디오의 13주 현금흐름을 정리해줘."

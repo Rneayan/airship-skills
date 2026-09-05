@@ -38,6 +38,9 @@ gh skill install Rneayan/airship-skills obsidian-task-triage
 | [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | 일간·주간·월간 일지를 직접기록 + 캘린더 + Todoist 완료 기록 3곳 대조로 보완. 덮어쓰기 절대 금지 | Obsidian · Google Calendar · Todoist |
 | [`obsidian-task-triage`](skills/obsidian-task-triage/SKILL.md) | 볼트의 체크박스 태스크를 **읽기 전용**으로 추출·분류·중복 제거해 하루/한 주의 작은 실행 큐로. counts-only 프라이버시 모드, 한/영 마감 키워드, 외부 패키지·네트워크 없음 | Obsidian (Python 스크립트 동봉) |
 | [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | AI 영상 공모전·영화제 DB를 옵시디언 노트 + 현황 시트로 관리. "원문 확인 전 제작 착수 금지" | Obsidian |
+| [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | 한국 1인 법인·창작자의 법인/개인 분리, 월 최소 필요금액, 13주 현금흐름, 세금·보험·부채와 프로젝트 공헌이익 점검 | Obsidian · Spreadsheet |
+| [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | 대학·공공기관·브랜드·AI CPP 맞춤 제안, 영문 지원문, 2회 이하 후속 연락과 상태표. 모든 발송은 건별 승인 | Obsidian · Email |
+| [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | 한국어 회의 메모를 사실·결정·약속·실행·미해결 질문으로 분리하고 PARA 프로젝트 기록에 연결 | Obsidian |
 
 ## 설계 원칙
 
@@ -46,6 +49,10 @@ gh skill install Rneayan/airship-skills obsidian-task-triage
 **근거 먼저.** 결론을 내기 전에 원문 맥락을 확인합니다. 기록이 없으면 "기록 없음", 확실치 않은 숫자는 `[확인 필요]`. 추측으로 채우지 않습니다.
 **압박은 정확한 수준으로.** 브리핑·일지·트리아지는 전체 개수를 나열하지 않고, 핵심 1개 + 보조 2개 정도의 작고 방어 가능한 추천을 냅니다.
 **개인 데이터는 스킬 밖에.** 볼트 경로, 계정 ID, 서명, 단가표는 플레이스홀더나 로컬 설정 파일로 두고 공개 패키지에 넣지 않습니다.
+
+## 파생 스킬과 출처
+
+`korea-creator-cashflow`, `korea-partnership-outreach`, `korea-meeting-to-actions`는 비행선선장이 처음부터 독자 개발한 원본이라고 주장하지 않습니다. 공개된 `financial-modeling`, `outreach-manager`, `meeting-notes` 스킬을 참고해 한국의 1인 창작자·스튜디오 운영에 맞게 재설계한 파생 스킬입니다. 원본 저장소·고정 커밋·라이선스·주요 변경점은 각 스킬의 `references/attribution.md`와 `LICENSE`에 보존했습니다.
 
 ## 저장소 구조
 
@@ -127,6 +134,9 @@ Or copy any skill folder into `~/.claude/skills/` (global), your project's `.cla
 | [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | Fill daily / weekly / monthly journals by cross-checking three sources: hand-written log, calendar, Todoist completions. Never overwrites | Obsidian · Google Calendar · Todoist |
 | [`obsidian-task-triage`](skills/obsidian-task-triage/SKILL.md) | **Read-only** extraction, classification and de-duplication of checkbox tasks into a small action queue for the day or week. Counts-only privacy mode, English + Korean deadline keywords, no network, no third-party packages | Obsidian (bundled Python script) |
 | [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | Maintain an AI video contest / film-festival database as Obsidian notes plus a status sheet. "No production before the official call is verified" | Obsidian |
+| [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | Separate corporate and personal cash, calculate monthly minimums and a 13-week runway, and track Korean tax/insurance/debt plus project contribution margins | Obsidian · Spreadsheet |
+| [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | Tailored outreach for Korean institutions, brands and AI CPPs, with English application copy, a two-follow-up cap and per-message approval | Obsidian · Email |
+| [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | Turn Korean meeting notes into facts, decisions, commitments, actions and open questions linked to PARA project records | Obsidian |
 
 ## Design principles
 
@@ -135,6 +145,10 @@ Or copy any skill folder into `~/.claude/skills/` (global), your project's `.cla
 **Evidence first.** Verify source context before drawing conclusions. No record → "no record"; uncertain number → `[needs confirmation]`. Never fill gaps with guesses.
 **Pressure at the accurate level.** Briefings, journals and triage don't enumerate everything; they return a small, defensible recommendation — one primary action, up to two secondary.
 **Personal data stays outside the skill.** Vault paths, account IDs, signatures and price tables live in placeholders or local config, never in the public package.
+
+## Derived skills and attribution
+
+`korea-creator-cashflow`, `korea-partnership-outreach`, and `korea-meeting-to-actions` are not presented as wholly original works by Airship Captain. They are adaptations of the public `financial-modeling`, `outreach-manager`, and `meeting-notes` skills, redesigned for Korean solo creators and small studios. Each skill preserves the upstream repository, pinned commit, license, and a prominent change notice in `references/attribution.md` and `LICENSE`.
 
 ## Repository layout
 
