@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian Task Triage"
+  short_description: "옵시디언 할 일을 근거 중심으로 안전하게 선별"
+  default_prompt: "Use $obsidian-task-triage to review my vault tasks and propose a focused daily plan."
