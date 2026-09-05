@@ -22,7 +22,7 @@ Extracts and classifies Markdown checkbox tasks, then guides an agent to produce
 - Optional local configuration for custom vault structures
 - No network calls or third-party Python packages
 
-After the repository is published, compatible GitHub CLI versions can install it with:
+Compatible GitHub CLI versions can install it with:
 
 ~~~bash
 gh skill install Rneayan/airship-skills obsidian-task-triage
@@ -56,4 +56,4 @@ Validate the skill directory with a compatible Agent Skills validator before pub
 
 This repository contains procedures and source code, not a personal Obsidian vault. Do not commit local configuration, extracted tasks, journal text, generated reports, or real vault fixtures.
 
-The first public release is intentionally limited to a read-only skill. License terms will be selected before publication.
+The first public version is intentionally limited to a read-only skill. License terms will be selected before the first tagged release.
