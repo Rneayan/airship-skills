@@ -3,6 +3,8 @@
 **1인 크리에이터·스튜디오 운영을 위한 Agent Skills 모음**
 *Practical, calm agent skills for solo creators — by [비행선선장 / Airship Captain](https://github.com/Rneayan), who runs a solo AI-assisted animation studio and teaches motion graphics.*
 
+🇰🇷 한국어 (아래) · 🇺🇸 [English](#english)
+
 한국어 비즈니스 커뮤니케이션, 외주 견적, 메일·일정·할일 운영, 옵시디언 일지와 태스크 정리까지 — 개발자가 아닌 **혼자 일하는 창작자**가 매일 굴리는 워크플로를 스킬로 옮겼습니다. 실제로 옵시디언 볼트와 AI 에이전트를 오가며 다듬은 규칙들이고, 개인 정보·단가·계정 ID는 `{{placeholder}}`로 비워 두었으니 본인 환경에 맞게 채워 쓰면 됩니다.
 
 [Agent Skills 오픈 표준](https://agentskills.io)(`SKILL.md`)을 따르므로 Claude Code, Claude 앱(Cowork), Codex, Cursor 등 SKILL.md를 읽는 어떤 에이전트에서도 쓸 수 있습니다.
@@ -79,6 +81,93 @@ python3 -m unittest discover -s tests -v
 **비행선선장 (Airship Captain)** — AI 활용 애니메이션 스튜디오 운영, 대학에서 모션그래픽 강의, 그리고 그 과정을 유튜브 [비행선 선장의 작업실](https://www.youtube.com/@AirshipCaptain)에 기록합니다.
 
 이슈·PR 환영합니다. 한국어로 일하는 크리에이터의 워크플로 스킬이 더 쌓이면 좋겠습니다.
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+<a id="english"></a>
+
+# English
+
+**Agent Skills for solo creators and one-person studios.**
+
+Korean business communication, freelance quoting, mail/calendar/task operations, Obsidian journaling and task triage — the daily workflows of a **non-developer creator working alone**, turned into portable skills. These rules were refined in real use, moving between an Obsidian vault and AI agents. Personal data, price tables and account IDs are left as `{{placeholder}}` so you can fill in your own.
+
+Everything follows the open [Agent Skills](https://agentskills.io) standard (`SKILL.md`), so the skills work in Claude Code, the Claude app (Cowork), Codex, Cursor, or any agent that reads SKILL.md. Most skill bodies are written in Korean, because that is the language these workflows run in — but the structure, checklists and boundaries translate directly, and any capable agent will follow them regardless of the language you speak to it in.
+
+## Install
+
+Claude Code — the whole set as a plugin:
+
+```
+/plugin marketplace add Rneayan/airship-skills
+/plugin install airship@airship-skills
+```
+
+GitHub CLI (compatible versions) — a single skill:
+
+```bash
+gh skill install Rneayan/airship-skills obsidian-task-triage
+```
+
+Or copy any skill folder into `~/.claude/skills/` (global), your project's `.claude/skills/`, or the skills directory of the agent you use.
+
+## Skills
+
+| Skill | What it does | Integrations |
+|-------|--------------|--------------|
+| [`korean-business-message`](skills/korean-business-message/SKILL.md) | Minimal-touch proofreading of Korean email / KakaoTalk / Slack messages that **keeps your own voice**. Channel-specific formatting rules, recurring fix patterns, and an explicit change log | — |
+| [`b2b-quote-analysis`](skills/b2b-quote-analysis/SKILL.md) | Analyze a video/animation outsourcing inquiry → missing-info checklist → modular quote. "A tight deadline is a rush premium, not a discount" | — |
+| [`mail-reply-draft`](skills/mail-reply-draft/SKILL.md) | Prepare replies to unanswered work email as Gmail drafts. Never sends, marks uncertain facts as `[확인 필요]` (needs confirmation), inserts your signature manually | Gmail |
+| [`morning-briefing`](skills/morning-briefing/SKILL.md) | Overdue items, today's calendar and new mail in one **low-pressure** briefing. "Doing just this one thing today is enough" | Todoist · Google Calendar · Gmail |
+| [`todoist-organizer`](skills/todoist-organizer/SKILL.md) | Backlog cleanup, merging and parking. Proven filters and move order for the Todoist MCP tools | Todoist |
+| [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | Fill daily / weekly / monthly journals by cross-checking three sources: hand-written log, calendar, Todoist completions. Never overwrites | Obsidian · Google Calendar · Todoist |
+| [`obsidian-task-triage`](skills/obsidian-task-triage/SKILL.md) | **Read-only** extraction, classification and de-duplication of checkbox tasks into a small action queue for the day or week. Counts-only privacy mode, English + Korean deadline keywords, no network, no third-party packages | Obsidian (bundled Python script) |
+| [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | Maintain an AI video contest / film-festival database as Obsidian notes plus a status sheet. "No production before the official call is verified" | Obsidian |
+
+## Design principles
+
+**The voice is the user's.** Proofreading skills edit minimally instead of rewriting, and always say what changed.
+**Propose, don't execute.** Mail stops at drafts, file moves wait for consent, bulk changes ask first. Vaults are read, never modified. A skill never decides on the user's behalf.
+**Evidence first.** Verify source context before drawing conclusions. No record → "no record"; uncertain number → `[needs confirmation]`. Never fill gaps with guesses.
+**Pressure at the accurate level.** Briefings, journals and triage don't enumerate everything; they return a small, defensible recommendation — one primary action, up to two secondary.
+**Personal data stays outside the skill.** Vault paths, account IDs, signatures and price tables live in placeholders or local config, never in the public package.
+
+## Repository layout
+
+```text
+.claude-plugin/        # Claude Code plugin + marketplace manifests
+skills/
+  <skill-name>/
+    SKILL.md           # the skill itself (required)
+    agents/            # per-agent metadata (optional)
+    scripts/           # bundled scripts (optional)
+    references/        # supporting docs (optional)
+tests/                 # script tests (synthetic data only)
+```
+
+## Customizing
+
+Replace `{{vault}}`, `{{INBOX_PROJECT_ID}}`, the `{{name}}` fields in the signature block, and similar placeholders in each SKILL.md. Todoist IDs can be looked up once with `find-projects` / `find-sections` as the skill describes. For `obsidian-task-triage`, pass a local JSON config via `--config` (see `references/configuration.md`) if your folder structure differs — and keep that file out of the repository.
+
+## Development
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+## Privacy
+
+This repository contains procedures and source code only. Do not commit local configuration, extracted tasks, journal text, generated reports or real vault fixtures. See [SECURITY.md](SECURITY.md).
+
+## Author
+
+**Airship Captain (비행선선장)** — runs a solo AI-assisted animation studio, teaches motion graphics at university, and documents the process on YouTube at [비행선 선장의 작업실](https://www.youtube.com/@AirshipCaptain).
+
+Issues and PRs are welcome — especially more workflow skills for creators who work in Korean.
 
 ## License
 
