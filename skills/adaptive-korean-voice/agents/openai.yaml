@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adaptive Korean Voice"
+  short_description: "사용자 말투를 학습해 한국어 출력을 개인화합니다"
+  default_prompt: "Use $adaptive-korean-voice to learn my Korean voice and create a reusable personal skill."
