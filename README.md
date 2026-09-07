@@ -48,6 +48,7 @@ npx skills add Rneayan/airship-skills@adaptive-korean-voice
 | [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | 한국 1인 법인·창작자의 법인/개인 분리, 월 최소 필요금액, 13주 현금흐름, 세금·보험·부채와 프로젝트 공헌이익 점검 | Obsidian · Spreadsheet |
 | [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | 대학·공공기관·브랜드·AI CPP 맞춤 제안, 영문 지원문, 2회 이하 후속 연락과 상태표. 모든 발송은 건별 승인 | Obsidian · Email |
 | [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | 한국어 회의 메모를 사실·결정·약속·실행·미해결 질문으로 분리하고 PARA 프로젝트 기록에 연결 | Obsidian |
+| [`dual-agent-instruction-sync`](skills/dual-agent-instruction-sync/SKILL.md) | Claude·Codex 등 에이전트를 2개 이상 함께 쓸 때 공용 지침(`AGENTS.md`)과 스킬을 단일 원본으로 유지. 스킬 3계층 분류, 심링크 배포, 지침 로딩 검증 마커, 인수인계 규칙 | 로컬 파일 (zsh 스크립트 동봉) |
 
 ## 설계 원칙
 
@@ -153,6 +154,7 @@ Or copy any skill folder into `~/.claude/skills/` (global), your project's `.cla
 | [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | Separate corporate and personal cash, calculate monthly minimums and a 13-week runway, and track Korean tax/insurance/debt plus project contribution margins | Obsidian · Spreadsheet |
 | [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | Tailored outreach for Korean institutions, brands and AI CPPs, with English application copy, a two-follow-up cap and per-message approval | Obsidian · Email |
 | [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | Turn Korean meeting notes into facts, decisions, commitments, actions and open questions linked to PARA project records | Obsidian |
+| [`dual-agent-instruction-sync`](skills/dual-agent-instruction-sync/SKILL.md) | Keep one source of truth for shared instructions (`AGENTS.md`) and skills across two or more agents (Claude Code, Codex). Three-tier skill ownership, symlink distribution, a load-verification marker, and handoff rules | Local files (bundled zsh script) |
 
 ## Design principles
 

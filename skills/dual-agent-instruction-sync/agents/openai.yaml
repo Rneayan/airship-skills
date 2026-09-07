@@ -1,0 +1,4 @@
+interface:
+  display_name: "에이전트 지침·스킬 동기화"
+  short_description: "여러 에이전트의 공용 지침과 스킬을 단일 원본으로 유지"
+  default_prompt: "공용 지침과 스킬 링크 상태를 점검하고 어긋난 부분을 알려줘."
