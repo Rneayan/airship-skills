@@ -42,13 +42,13 @@ npx skills add Rneayan/airship-skills@adaptive-korean-voice
 | [`mail-reply-draft`](skills/mail-reply-draft/SKILL.md) | 미회신 업무 메일의 답장을 Gmail 임시보관함에 준비. 발송 금지, `[확인 필요]` 표기, 서명 수동 삽입 | Gmail |
 | [`morning-briefing`](skills/morning-briefing/SKILL.md) | 마감·일정·새 메일을 한 번에, **압박감 없는 톤**으로. "오늘은 이거 하나만 해도 충분하다" | Todoist · Google Calendar · Gmail |
 | [`todoist-organizer`](skills/todoist-organizer/SKILL.md) | 백로그 정리·통합·보류 이관. Todoist MCP 도구의 검증된 필터와 이동 순서 | Todoist |
-| [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | 일간·주간·월간 일지를 직접기록 + 캘린더 + Todoist 완료 기록 3곳 대조로 보완. 덮어쓰기 절대 금지 | Obsidian · Google Calendar · Todoist |
+| [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | 일간·주간·월간 일지를 직접기록·캘린더·Todoist에 더해 **그날 AI 에이전트와 한 작업(인수인계 노트)과 볼트에 남긴 노트**까지 "오늘 한 일"로 병합. 안 적은 날도 흔적을 모아 채우고, 덮어쓰기는 절대 금지 | Obsidian · Google Calendar · Todoist (Python 스크립트 동봉) |
 | [`obsidian-task-triage`](skills/obsidian-task-triage/SKILL.md) | 볼트의 체크박스 태스크를 **읽기 전용**으로 추출·분류·중복 제거해 하루/한 주의 작은 실행 큐로. counts-only 프라이버시 모드, 한/영 마감 키워드, 외부 패키지·네트워크 없음 | Obsidian (Python 스크립트 동봉) |
 | [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | AI 영상 공모전·영화제 DB를 옵시디언 노트 + 현황 시트로 관리. "원문 확인 전 제작 착수 금지" | Obsidian |
 | [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | 한국 1인 법인·창작자의 법인/개인 분리, 월 최소 필요금액, 13주 현금흐름, 세금·보험·부채와 프로젝트 공헌이익 점검 | Obsidian · Spreadsheet |
 | [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | 대학·공공기관·브랜드·AI CPP 맞춤 제안, 영문 지원문, 2회 이하 후속 연락과 상태표. 모든 발송은 건별 승인 | Obsidian · Email |
 | [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | 한국어 회의 메모를 사실·결정·약속·실행·미해결 질문으로 분리하고 PARA 프로젝트 기록에 연결 | Obsidian |
-| [`dual-agent-instruction-sync`](skills/dual-agent-instruction-sync/SKILL.md) | Claude·Codex 등 에이전트를 2개 이상 함께 쓸 때 공용 지침(`AGENTS.md`)과 스킬을 단일 원본으로 유지. 스킬 3계층 분류, 심링크 배포, 지침 로딩 검증 마커, 인수인계 규칙 | 로컬 파일 (zsh 스크립트 동봉) |
+| [`dual-agent-instruction-sync`](skills/dual-agent-instruction-sync/SKILL.md) | Claude·Codex 등 에이전트를 2개 이상 함께 쓸 때 공용 지침(`AGENTS.md`)과 스킬을 단일 원본으로 유지. 스킬 3계층 분류, 심링크 배포, 지침 로딩 검증 마커, 일지로 이어지는 인수인계 규칙, 원격 셸 제약 | 로컬 파일 (zsh 스크립트 동봉) |
 
 ## 설계 원칙
 
@@ -148,13 +148,13 @@ Or copy any skill folder into `~/.claude/skills/` (global), your project's `.cla
 | [`mail-reply-draft`](skills/mail-reply-draft/SKILL.md) | Prepare replies to unanswered work email as Gmail drafts. Never sends, marks uncertain facts as `[확인 필요]` (needs confirmation), inserts your signature manually | Gmail |
 | [`morning-briefing`](skills/morning-briefing/SKILL.md) | Overdue items, today's calendar and new mail in one **low-pressure** briefing. "Doing just this one thing today is enough" | Todoist · Google Calendar · Gmail |
 | [`todoist-organizer`](skills/todoist-organizer/SKILL.md) | Backlog cleanup, merging and parking. Proven filters and move order for the Todoist MCP tools | Todoist |
-| [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | Fill daily / weekly / monthly journals by cross-checking three sources: hand-written log, calendar, Todoist completions. Never overwrites | Obsidian · Google Calendar · Todoist |
+| [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | Fill daily / weekly / monthly journals from the hand-written log, calendar and Todoist — plus **the day's AI-agent work (from the handoff note) and the notes you created or edited**, so undocumented days still get a record. Never overwrites | Obsidian · Google Calendar · Todoist (bundled Python script) |
 | [`obsidian-task-triage`](skills/obsidian-task-triage/SKILL.md) | **Read-only** extraction, classification and de-duplication of checkbox tasks into a small action queue for the day or week. Counts-only privacy mode, English + Korean deadline keywords, no network, no third-party packages | Obsidian (bundled Python script) |
 | [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | Maintain an AI video contest / film-festival database as Obsidian notes plus a status sheet. "No production before the official call is verified" | Obsidian |
 | [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | Separate corporate and personal cash, calculate monthly minimums and a 13-week runway, and track Korean tax/insurance/debt plus project contribution margins | Obsidian · Spreadsheet |
 | [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | Tailored outreach for Korean institutions, brands and AI CPPs, with English application copy, a two-follow-up cap and per-message approval | Obsidian · Email |
 | [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | Turn Korean meeting notes into facts, decisions, commitments, actions and open questions linked to PARA project records | Obsidian |
-| [`dual-agent-instruction-sync`](skills/dual-agent-instruction-sync/SKILL.md) | Keep one source of truth for shared instructions (`AGENTS.md`) and skills across two or more agents (Claude Code, Codex). Three-tier skill ownership, symlink distribution, a load-verification marker, and handoff rules | Local files (bundled zsh script) |
+| [`dual-agent-instruction-sync`](skills/dual-agent-instruction-sync/SKILL.md) | Keep one source of truth for shared instructions (`AGENTS.md`) and skills across two or more agents (Claude Code, Codex). Three-tier skill ownership, symlink distribution, a load-verification marker, handoff rules that feed the journal, and remote-shell caveats | Local files (bundled zsh script) |
 
 ## Design principles
 
