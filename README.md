@@ -44,7 +44,7 @@ npx skills add Rneayan/airship-skills@adaptive-korean-voice
 | [`todoist-organizer`](skills/todoist-organizer/SKILL.md) | 백로그 정리·통합·보류 이관. Todoist MCP 도구의 검증된 필터와 이동 순서 | Todoist |
 | [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | 일간·주간·월간 일지를 직접기록·캘린더·Todoist에 더해 **그날 AI 에이전트와 한 작업(인수인계 노트)과 볼트에 남긴 노트**까지 "오늘 한 일"로 병합. 안 적은 날도 흔적을 모아 채우고, 덮어쓰기는 절대 금지 | Obsidian · Google Calendar · Todoist (Python 스크립트 동봉) |
 | [`obsidian-task-triage`](skills/obsidian-task-triage/SKILL.md) | 볼트의 체크박스 태스크를 **읽기 전용**으로 추출·분류·중복 제거해 하루/한 주의 작은 실행 큐로. counts-only 프라이버시 모드, 한/영 마감 키워드, 외부 패키지·네트워크 없음 | Obsidian (Python 스크립트 동봉) |
-| [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | AI 영상 공모전·영화제 DB를 옵시디언 노트 + 현황 시트로 관리. "원문 확인 전 제작 착수 금지" | Obsidian |
+| [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | AI 공모전·영화제를 마감일순 목록과 참여 조건으로 정리. 사람용 보고·AI 지침 분리, 조사 이력 누적, 마감 아카이브 | Obsidian |
 | [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | 한국 1인 법인·창작자의 법인/개인 분리, 월 최소 필요금액, 13주 현금흐름, 세금·보험·부채와 프로젝트 공헌이익 점검 | Obsidian · Spreadsheet |
 | [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | 대학·공공기관·브랜드·AI CPP 맞춤 제안, 영문 지원문, 2회 이하 후속 연락과 상태표. 모든 발송은 건별 승인 | Obsidian · Email |
 | [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | 한국어 회의 메모를 사실·결정·약속·실행·미해결 질문으로 분리하고 PARA 프로젝트 기록에 연결 | Obsidian |
@@ -150,7 +150,7 @@ Or copy any skill folder into `~/.claude/skills/` (global), your project's `.cla
 | [`todoist-organizer`](skills/todoist-organizer/SKILL.md) | Backlog cleanup, merging and parking. Proven filters and move order for the Todoist MCP tools | Todoist |
 | [`obsidian-journal`](skills/obsidian-journal/SKILL.md) | Fill daily / weekly / monthly journals from the hand-written log, calendar and Todoist — plus **the day's AI-agent work (from the handoff note) and the notes you created or edited**, so undocumented days still get a record. Never overwrites | Obsidian · Google Calendar · Todoist (bundled Python script) |
 | [`obsidian-task-triage`](skills/obsidian-task-triage/SKILL.md) | **Read-only** extraction, classification and de-duplication of checkbox tasks into a small action queue for the day or week. Counts-only privacy mode, English + Korean deadline keywords, no network, no third-party packages | Obsidian (bundled Python script) |
-| [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | Maintain an AI video contest / film-festival database as Obsidian notes plus a status sheet. "No production before the official call is verified" | Obsidian |
+| [`ai-contest-db`](skills/ai-contest-db/SKILL.md) | Manage AI contests and film festivals with a deadline-sorted overview, participation details, separate agent guidance, a cumulative research log, and deadline archiving | Obsidian |
 | [`korea-creator-cashflow`](skills/korea-creator-cashflow/SKILL.md) | Separate corporate and personal cash, calculate monthly minimums and a 13-week runway, and track Korean tax/insurance/debt plus project contribution margins | Obsidian · Spreadsheet |
 | [`korea-partnership-outreach`](skills/korea-partnership-outreach/SKILL.md) | Tailored outreach for Korean institutions, brands and AI CPPs, with English application copy, a two-follow-up cap and per-message approval | Obsidian · Email |
 | [`korea-meeting-to-actions`](skills/korea-meeting-to-actions/SKILL.md) | Turn Korean meeting notes into facts, decisions, commitments, actions and open questions linked to PARA project records | Obsidian |
